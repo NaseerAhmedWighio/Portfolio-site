@@ -1,0 +1,16 @@
+
+
+.custom-input {
+    background-color: transparent; /* Fallback */
+  }
+  
+  .custom-input:-webkit-autofill,
+  .custom-input:-webkit-autofill:hover,
+  .custom-input:-webkit-autofill:focus,
+  .custom-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #d6336c inset !important; /* Your background color */
+    box-shadow: 0 0 0px 1000px #d6336c inset !important; /* Your background color */
+    background-color: #d6336c !important; /* Your background color */
+    color: white; /* Adjust text color as needed */
+  }
+  
