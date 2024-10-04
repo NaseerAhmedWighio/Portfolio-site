@@ -15,21 +15,21 @@ export default function Header() {
   };
 
   // Hide dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event:MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownVisible(false); // Close dropdown if clicked outside
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event:MouseEvent) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setDropdownVisible(false); // Close dropdown if clicked outside
+  //     }
+  //   };
 
-    // Add event listener for detecting clicks outside
-    document.addEventListener("mousedown", handleClickOutside);
+  //   // Add event listener for detecting clicks outside
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      // Cleanup event listener when component unmounts
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   return () => {
+  //     // Cleanup event listener when component unmounts
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <header className="flex justify-between">
