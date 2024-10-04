@@ -31,7 +31,7 @@ const EditableResume: React.FC = () => {
   };
 
   // const copyLink = () => {
-  //   navigator.clipboard.writeText(window.location.href).then(() => {
+  //   navigator.clipboard.writeText(link).then(() => {
   //     alert('Link copied to clipboard!');
   //   });
   // };
@@ -43,10 +43,7 @@ const EditableResume: React.FC = () => {
   //         title: 'Resume',
   //         url: window.location.href,
   //       })
-  //       .then(() => {
-  //         alert('Thanks for sharing!');
-  //       })
-  //       .catch(console.error);
+  //       .catch((error)=> console.error('Error Sharing', error));
   //   } else {
   //     alert('Your browser does not support the Share feature.');
   //   }
