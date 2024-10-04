@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
-import { metadata } from "./layout";
-import { title } from "process";
+
 import naseer from "@/app/icons/naseer.jpg"
 
 // export const metadata = {

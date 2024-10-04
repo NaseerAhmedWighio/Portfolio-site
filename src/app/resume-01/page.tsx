@@ -1,8 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import image from "./ashraf.jpg"
+
 import naseer from "@/app/icons/naseer.jpg"
 
 const Resume = () => {

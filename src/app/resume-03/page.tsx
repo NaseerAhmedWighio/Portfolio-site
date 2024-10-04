@@ -2,8 +2,8 @@
 import "./style.css"
 import React, { useState } from 'react';
 import { jsPDF } from 'jspdf';
-import Link from 'next/link';
-import Image from 'next/image';
+// import Link from 'next/link';
+// import Image from 'next/image';
 
 const EditableResume: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,56 +30,56 @@ const EditableResume: React.FC = () => {
     setShowResume(true);
   };
 
-  const copyLink = () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      alert('Link copied to clipboard!');
-    });
-  };
+  // const copyLink = () => {
+  //   navigator.clipboard.writeText(window.location.href).then(() => {
+  //     alert('Link copied to clipboard!');
+  //   });
+  // };
 
-  const share = () => {
-    if (navigator.share) {
-      navigator
-        .share({
-          title: 'Resume',
-          url: window.location.href,
-        })
-        .then(() => {
-          alert('Thanks for sharing!');
-        })
-        .catch(console.error);
-    } else {
-      alert('Your browser does not support the Share feature.');
-    }
-  };
+  // const share = () => {
+  //   if (navigator.share) {
+  //     navigator
+  //       .share({
+  //         title: 'Resume',
+  //         url: window.location.href,
+  //       })
+  //       .then(() => {
+  //         alert('Thanks for sharing!');
+  //       })
+  //       .catch(console.error);
+  //   } else {
+  //     alert('Your browser does not support the Share feature.');
+  //   }
+  // };
 
-  const downloadPDF = () => {
-    const doc = new jsPDF();
-    const {
-      name,
-      fname,
-      email,
-      phone,
-      degree,
-      institution,
-      year1,
-      position,
-      company,
-      year2,
-    } = formData;
+  // const downloadPDF = () => {
+  //   const doc = new jsPDF();
+  //   const {
+  //     name,
+  //     fname,
+  //     email,
+  //     phone,
+  //     degree,
+  //     institution,
+  //     year1,
+  //     position,
+  //     company,
+  //     year2,
+  //   } = formData;
 
-    doc.text(20, 20, `Name: ${name}`);
-    doc.text(20, 30, `Father's Name: ${fname}`);
-    doc.text(20, 40, `Email: ${email}`);
-    doc.text(20, 50, `Phone: ${phone}`);
-    doc.text(20, 60, `Degree: ${degree}`);
-    doc.text(20, 70, `Institution: ${institution}`);
-    doc.text(20, 80, `Year: ${year1}`);
-    doc.text(20, 90, `Position: ${position}`);
-    doc.text(20, 100, `Company: ${company}`);
-    doc.text(20, 110, `Year: ${year2}`);
+  //   doc.text(20, 20, `Name: ${name}`);
+  //   doc.text(20, 30, `Father's Name: ${fname}`);
+  //   doc.text(20, 40, `Email: ${email}`);
+  //   doc.text(20, 50, `Phone: ${phone}`);
+  //   doc.text(20, 60, `Degree: ${degree}`);
+  //   doc.text(20, 70, `Institution: ${institution}`);
+  //   doc.text(20, 80, `Year: ${year1}`);
+  //   doc.text(20, 90, `Position: ${position}`);
+  //   doc.text(20, 100, `Company: ${company}`);
+  //   doc.text(20, 110, `Year: ${year2}`);
 
-    doc.save('resume.pdf');
-  };
+  //   doc.save('resume.pdf');
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-800 to-red-800 py-10">
